@@ -1,2 +1,7 @@
-h1 Messages#index
-p Find me in app/views/messages/index.html.slim
+.col-md-8.col-md-offset-2
+  - @messages.each do |msg|
+    h2= msg.title
+    p= msg.description
+    => link_to 'join me!', message_path(msg)
+  br
+  = link_to 'New Message', new_message_path

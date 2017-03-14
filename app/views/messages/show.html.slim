@@ -1,0 +1,11 @@
+.col-md-10.col-md-offset-1
+  .message-show
+    h2= @message.title
+    p.message-posted-by
+    => time_ago_in_words(@message.created_at) unless @message.created_at.blank?
+    | ago
+    p.message-desc= @message.description
+    .links.btn-group
+      => link_to 'Back', root_path, class: 'btn btn-default'
+      => link_to 'Fix me!', edit_message_path(@message), class: 'btn btn-primary'
+      =< link_to 'trash me', @message, method: :delete, data: { confirm: 'Why?' }, class: 'btn btn-danger'
