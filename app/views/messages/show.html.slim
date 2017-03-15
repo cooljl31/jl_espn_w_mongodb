@@ -7,5 +7,6 @@
     p.message-desc= @message.description
     .links.btn-group
       => link_to 'Back', root_path, class: 'btn btn-default'
-      => link_to 'Fix me!', edit_message_path(@message), class: 'btn btn-primary'
-      =< link_to 'trash me', @message, method: :delete, data: { confirm: 'Why?' }, class: 'btn btn-danger'
+      - if user_signed_in? && current_user.id == @pic.user_id
+        => link_to 'Fix me!', edit_message_path(@message), class: 'btn btn-primary'
+        =< link_to 'trash me', @message, method: :delete, data: { confirm: 'Why?' }, class: 'btn btn-danger'
