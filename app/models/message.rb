@@ -4,4 +4,8 @@ class Message
  
   field :title, type: String
   field :description, type: String
+  field :user_id, type: Integer
+
+
+  belongs_to :user
 end
