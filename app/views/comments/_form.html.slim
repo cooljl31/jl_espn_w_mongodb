@@ -1,0 +1,5 @@
+= simple_form_for ([@message, @message.comments.build]) do |f|
+  .form-group
+    = f.input :content, label: 'Comments', class: 'form-control', as: :text
+  .form-group
+    = f.button :submit, class: 'btn-custom'
