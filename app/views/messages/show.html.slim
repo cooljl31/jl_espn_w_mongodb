@@ -5,6 +5,13 @@
     => time_ago_in_words(@message.created_at) unless @message.created_at.blank?
     | ago
     p.message-desc= @message.description
+
+    h3.comment-section-header Comments:
+    p= render @message.comments
+
+    h3.reply-to-msg Join Discution:
+    = render 'comments/form'
+
     .links.btn-group
       => link_to 'Back', root_path, class: 'btn btn-default'
       - if user_signed_in? && current_user.id == @message.user_id
