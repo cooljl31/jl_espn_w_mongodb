@@ -37,7 +37,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '>= 4.8.0'
   gem 'mongoid-rspec'
-  gem 'cucumber-rails', '>= 1.4.5'
+  gem 'cucumber-rails', '>= 2.1.0'
   gem 'capybara', '>= 2.12.1'
   gem 'database_cleaner'
 end
