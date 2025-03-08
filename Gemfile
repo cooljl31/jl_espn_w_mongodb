@@ -6,9 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
+gem 'rails', '~> 7.0.0'
 gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0', '>= 5.0.8'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
 gem 'jquery-rails', '>= 4.3.5'
@@ -37,7 +37,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '>= 4.9.0'
   gem 'mongoid-rspec'
-  gem 'cucumber-rails', '>= 1.8.0'
+  gem 'cucumber-rails', '>= 2.1.0'
   gem 'capybara', '>= 2.12.1'
   gem 'database_cleaner'
 end
