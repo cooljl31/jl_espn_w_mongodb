@@ -23,7 +23,7 @@ gem 'devise', '>= 4.7.0'
 gem 'devise-bootstrap-views'
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '>= 3.5.2'
+  gem 'rspec-rails', '>= 8.0.0'
 end
 gem 'rails_12factor', group: :production
 group :development do
